@@ -27,7 +27,7 @@ app.use(bodyParser.json())
 app.use('/', (request, response) => {
   bot.reply(request, response)
     .then(success => {
-      console.log(success)
+      console.log('Intent result',success)
       if (!response.headersSent) { response.status(200) }
     }).catch(error => {
       console.log('Error in your bot:', error)
